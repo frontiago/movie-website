@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Robot', sans-serif;
+  overflow-x: hidden;
+}
+
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  color: #fff;
+  font-family: 'Sen', sans-serif;
+  height: 100%;
+}
+
+.logo-container {
+  flex: 2;
+}
+
+.logo {
+  font-size: 30px;
+  color: #4dbf00;
+}
+
+.menu-container {
+  flex: 5;
+}
+
+.menu-list {
+  display: flex;
+  padding-top: .5rem;
+  list-style: none;
+}
+
+.menu-list-item {
+  margin-right: 35px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.menu-list-item:hover {
+  color: #4dbf00;
+}
+
+.menu-list-item.active {
+  font-weight: bold;
+}
+
+.profile-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-text-container {
+  margin: 0 20px;
+}
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.toggle-icon {
+  color: goldenrod;
+}
+
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  background-color: #000;
+  border-radius: 50%;
+  right: 1px;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+.sidebar {
+  width: 50px;
+  height: 100%;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+.sidebar .fas {
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-bottom: 3.43rem;
+}
+
+.sidebar .fas:hover {
+  color: #4dbf00;
+}
+
+.container {
+  background-color: #000;
+  min-height: calc(100vh - 50px);
+  color: #fff;
+}
+
+.container-content {
+  margin-left: 50px;
+  padding: 1rem;
+}
+
+.featured-content {
+  height: 50vh;
+  padding: 50px;
+  background: #ccc;
+}
+
+.featured-title {
+  width: 200px;
+}
+
+.featured-description {
+  width: 500px;
+  color: lightgrey;
+  margin: 1.5rem 0;
+}
+
+.featured-button {
+  background-color: #43a105;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.featured-button:hover {
+  background-color: #6dc830;
+  color: #ffffff;
+}
+
+.movie-list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-list-container {
+  padding: 20px 20px;
+}
+
+.movie-list {
+  display: flex;
+  height: 250px;
+  align-items: center;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+.movie-list-title {
+  font-size: 1.4rem;
+}
+
+.movie-list-item {
+  margin-right: 30px;
+  position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin-right: 30px;
+  opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-description,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.movie-list-item-img {
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  transition: all 1s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.movie-list-item-title {
+  background-color: #333;
+  padding: 0;
+  font-size: 22px;
+  font-weight: bold;
+  width: 250px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  opacity: 0;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.movie-list-item-description {
+  background-color: #333;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 10px;
+  width: 250px;
+  opacity: 0;
+}
+
+.movie-list-item-button {
+  padding: 10px;
+  background-color: #4dbf00;
+  color: #fff;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  left: 10px;
+  opacity: 0;
+  bottom: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  font-size: 5rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* LIGHT MODE */
+.container.active {
+  background-color: #fff;
+}
+
+.movie-list-title.active {
+  color: #000;
+}
+
+.navbar-container.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.sidebar.active {
+  background-color: #fff;
+}
+
+.sidebar i.fas.active {
+  color: #000;
+}
+
+.toggle.active {
+  background-color: #000;
+}
+
+.toggle-ball.active {
+  background-color: #fff;
+  transform: translateX(-20px);
+}
+
+@media only screen and (max-width: 940px) {
+  .menu-container {
+    display: none;
+  }
+}
