@@ -4,4 +4,4 @@
 
 ### 👁️[ View Online](https://thiagowfer.github.io/movie-website/)
 
-![Print](./img/print.jpg)
+![Print](./img/print.png)
